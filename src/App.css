@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
+:root {
+  --color-lightest: #fff4e6;
+  --color-light: #ffe8cc;
+  --color-medium: #ffa94d;
+  --color-dark: #ff922b;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  font-size: 82.5%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  height: 100vh;
+  color: #495057;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  display: grid;
+  grid-template-columns: 34rem 44rem;
+  column-gap: 10px;
+  width: 100%;
+  align-items: start;
+  justify-content: center;
+  box-sizing: border-box;
+  /* padding: 50px; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  background-color: var(--color-medium);
+  color: black;
+  border: #ff922b;
+  padding: 8px;
+  border-radius: 5px;
+  font-weight: 600;
+  box-sizing: content-box;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: var(--color-dark);
+}
+
+.personal-photo {
+  border: transparent;
+  margin-right: 5px;
+}
+.personal-photo img {
+  border-radius: 50%;
+
+  width: 100%;
+  object-fit: contain;
+}
+
+.friend-owes {
+  color: green;
+}
+.you-owe {
+  color: red;
+}
+
+.friend-details {
+  width: 100% !important;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  margin-bottom: 7px;
+  padding: 6px;
+  border-radius: 7px;
+}
+
+.addFriend-sec {
+  background-color: #fff4e6;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.closeBtn {
+  padding: 10px;
+}
+
+.input-Element {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 7px 0px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+input {
+  margin: 0;
+  padding: 4px 11px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.bill-section {
+  padding: 20px;
+  background-color: #fff4e6;
+}
+.bill-section-closed {
+  display: none !important;
+}
+.bill-section h2 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.friend-list {
+  height: 200px;
+  overflow: scroll;
+}
+
+.friend-list::-webkit-scrollbar {
+  display: none;
+}
+
+.addFrBtn {
+  padding: 10px 6px;
+}
+
+.choose-payer,
+.friend-expense {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 7px 0px;
+}
+
+select {
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.who-pay,
+.who-pay option {
+  text-align: center;
+  padding: 5px;
 }
